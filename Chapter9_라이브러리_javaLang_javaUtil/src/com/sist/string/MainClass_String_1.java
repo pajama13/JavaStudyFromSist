@@ -22,26 +22,40 @@ import java.util.StringJoiner;
 public class MainClass_String_1 {
 
 	public static void main(String[] args) {
-		String color="red,blue,black,yellow,green,white";
-		//색상별로 분리(잘라서 쓰기)
+//		String color="red,blue,black,yellow,green,white";
+//		//색상별로 분리(잘라서 쓰기)
+//		String[] colors=color.split(",");
+//		for(String c:colors)
+//		{
+//			System.out.println(c);
+//		}
+//		System.out.println("--- 출력형식(join) ---");
+//		String ss=String.join("-",colors);
+//		System.out.println(ss);
+//		System.out.println("--- 출력형식 ---");
+//		ss=color.replace(",","-");
+//		System.out.println(ss);
+//		//이미지 여러 개를 동시에 묶어서 저장 시, 구분자를 사용하여 저장 --> 데이터를 나눠서 출력
+//		StringJoiner sj=new StringJoiner(",","{","}");
+//		for(String s:colors)
+//		{
+//			sj.add(ss);
+//		}
+//		System.out.println(sj.toString());
+		
+		String color="red,blue,green,yellow";
 		String[] colors=color.split(",");
-		for(String c:colors)
-		{
-			System.out.println(c);
-		}
-		System.out.println("--- 출력형식(join) ---");
-		String ss=String.join("-",colors);
+		System.out.println(Arrays.toString(colors));
+		String ss=String.join(" & ", colors);
 		System.out.println(ss);
-		System.out.println("--- 출력형식 ---");
-		ss=color.replace(",","-");
-		System.out.println(ss);
-		//이미지 여러 개를 동시에 묶어서 저장 시, 구분자를 사용하여 저장 --> 데이터를 나눠서 출력
-		StringJoiner sj=new StringJoiner(",","{","}");
+		
+		StringJoiner sn=new StringJoiner(" - ","< "," >");
 		for(String s:colors)
 		{
-			sj.add(ss);
+			sn.add(s);
 		}
-		System.out.println(sj.toString());
+		System.out.println(sn);
+		
 	}
 
 }

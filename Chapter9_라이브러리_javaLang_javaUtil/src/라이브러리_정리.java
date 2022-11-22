@@ -13,7 +13,13 @@ java.lang
   -객체비교 : equals() : 주소값 비교 (기본형은 ==으로 비교, 참조형은 equals로 비교)
     원형) public boolean equals(Object obj)
   -문자열 변환
-*String
+    A a=new A(); --> System.out.println(a) --> a.toString()
+    원형) public String toString()
+*String : 문자열 저장
+  문자열 저장 방식
+  -String s="";  //문자열 주소 얻는 방식
+  -String s=new String(""); //새로운 메모리에 문자열 저장하는 방식
+  -참조변수인데 기본형식 취급받는다는 단점이 있음
 *StringBuffer
 *Wrapper
 *System

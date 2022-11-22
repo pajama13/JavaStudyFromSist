@@ -12,18 +12,29 @@ Math : 기본적인 수학 계산에 필요한 라이브러리
 
 package com.sist.math;
 import static java.lang.Math.round;
+
+import java.util.StringTokenizer;
+
 import static java.lang.Math.ceil;
 import static java.lang.Math.random;
 public class MainClass_Math_1 {
 
 	public static void main(String[] args) {
-		System.out.printf("%.2f\n",87.555);
-		System.out.println(round(87.555));
-		System.out.println(ceil(87.01));
-		System.out.println((int)(random()*100));
+//		System.out.printf("%.2f\n",87.555);
+//		System.out.println(round(87.555));
+//		System.out.println(ceil(87.01));
+//		System.out.println((int)(random()*100));
 //		System.out.println(Math.round(87.555)); //import 따로 안 했으면 Math.메소드()로 써주기
 //		System.out.println(Math.ceil(87.01));
 //		System.out.println((int)(Math.random()*100));
+		
+		String s="오늘의 메뉴는 부대찌개";
+		StringTokenizer sn=new StringTokenizer(s);
+		for(int i=0; i<3; i++)
+		{
+			System.out.println(sn.nextToken());
+		}
+		
 	}
 
 }
